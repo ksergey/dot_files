@@ -1,0 +1,3 @@
+smb://diskstation.lan/music/ nse-music
+smb://diskstation.lan/backup/ nas-backup
+smb://diskstation.lan/download/ nas-download

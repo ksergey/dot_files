@@ -1,0 +1,6 @@
+diskstation.lan:/volume1/Backup   /nfs/Backup   nfs users,noauto,_netdev,x-systemd.automount,x-systemd.device-timeout=10,timeo=14,noatime 0 0
+diskstation.lan:/volume1/Download /nfs/Download nfs users,noauto,_netdev,x-systemd.automount,x-systemd.device-timeout=10,timeo=14,noatime 0 0
+diskstation.lan:/volume1/Exchange /nfs/Exchange nfs users,noauto,_netdev,x-systemd.automount,x-systemd.device-timeout=10,timeo=14,noatime 0 0
+diskstation.lan:/volume1/Music    /nfs/Music    nfs users,noauto,_netdev,x-systemd.automount,x-systemd.device-timeout=10,timeo=14,noatime 0 0
+diskstation.lan:/volume1/Photo    /nfs/Photo    nfs users,noauto,_netdev,x-systemd.automount,x-systemd.device-timeout=10,timeo=14,noatime 0 0
+diskstation.lan:/volume1/Video    /nfs/Video    nfs users,noauto,_netdev,x-systemd.automount,x-systemd.device-timeout=10,timeo=14,noatime 0 0

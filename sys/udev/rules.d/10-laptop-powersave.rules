@@ -1,0 +1,15 @@
+# PCI runtime power management
+ACTION=="add", SUBSYSTEM=="pci", ATTR{power/control}="auto"
+
+# USB autosuspend
+ACTION=="add", SUBSYSTEM=="usb", ATTR{power/control}="auto"
+ACTION=="add", SUBSYSTEM=="usb", TEST=="power/autosuspend" ATTR{power/autosuspend}="60"
+
+# SATA active link power management
+SUBSYSTEM=="scsi_host", KERNEL=="host*", ATTR{link_power_management_policy}="min_power"
+
+# Wlan power save
+ACTION=="add", SUBSYSTEM=="net", KERNEL=="wlp*" RUN+="/usr/sbin/iw dev %k set power_save on"
+
+# Disable wake-on-LAN
+ACTION=="add", SUBSYSTEM=="net", KERNEL=="enp*" RUN+="/usr/sbin/ethtool -s %k wol d"
