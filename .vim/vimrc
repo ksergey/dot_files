@@ -5,7 +5,7 @@ Plug 'derekwyatt/vim-fswitch', { 'for': ['c', 'cpp'] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['cpp'] }
 Plug 'tpope/vim-markdown', { 'for': ['markdown'] }
 Plug 'ervandew/supertab'
-Plug 'NLKNguyen/c-syntax.vim', { 'for': ['c', 'cpp'] }
+"Plug 'NLKNguyen/c-syntax.vim', { 'for': ['c', 'cpp'] }
 Plug 'jiangmiao/auto-pairs'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
