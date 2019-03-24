@@ -5,15 +5,17 @@ Plug 'derekwyatt/vim-fswitch', { 'for': ['c', 'cpp'] }
 Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['cpp'] }
 Plug 'tpope/vim-markdown', { 'for': ['markdown'] }
 Plug 'ervandew/supertab'
-"Plug 'NLKNguyen/c-syntax.vim', { 'for': ['c', 'cpp'] }
+Plug 'justinmk/vim-syntax-extra'
 Plug 'jiangmiao/auto-pairs'
 Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
-Plug 'nanotech/jellybeans.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'josuegaleas/jay'
-Plug 'Valloric/YouCompleteMe'
+Plug 'rhysd/vim-clang-format'
+" Colorschemes
+"Plug 'nanotech/jellybeans.vim'
+"Plug 'josuegaleas/jay'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -90,6 +92,12 @@ let g:gitgutter_enabled=0
 nmap <leader>m :GitGutterToggle<cr>
 
 "---------------------------------------
+" clang-format
+"---------------------------------------
+let g:clang_format#detect_style_file=1
+"let g:clang_format#auto_format=1
+
+"---------------------------------------
 " VIM settings
 "---------------------------------------
 syntax on
@@ -152,11 +160,10 @@ set cinoptions=g-1
 "---------------------------------------
 set t_Co=256
 set background=dark
-silent! colorscheme jay
-"silent! colorscheme jellybeans
+"silent! colorscheme jay
+silent! colorscheme gruvbox
 
-"let g:lightline = { 'colorscheme': 'jellybeans', 'enable': { 'statusline': 1, 'tabline': 1 } }
-let g:lightline = {'colorscheme': 'jay', 'enable':{'statusline': 1, 'tabline': 1}}
+let g:lightline = {'colorscheme': 'gruvbox', 'enable':{'statusline': 1, 'tabline': 1}}
 
 "---------------------------------------
 " VIM bindings
