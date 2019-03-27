@@ -11,13 +11,20 @@ Plug 'SirVer/ultisnips'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'itchyny/lightline.vim'
-Plug 'rhysd/vim-clang-format'
+
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+Plug 'google/vim-glaive'
+
 " Colorschemes
-"Plug 'nanotech/jellybeans.vim'
-"Plug 'josuegaleas/jay'
+Plug 'josuegaleas/jay'
 Plug 'morhetz/gruvbox'
 
 call plug#end()
+
+if exists('glaive#Install')
+  call glaive#Install()
+endif
 
 let mapleader="\<Space>"
 let g:load_doxygen_syntax=1
@@ -54,7 +61,7 @@ let g:tagbar_show_linenumbers=0
 let g:tagbar_singleclick=1
 let g:tagbar_iconchars=['▶', '▼']
 let g:tagbar_previewwin_pos = "aboveleft"
-let g:tagbar_autopreview=1
+let g:tagbar_autopreview=0
 map <F12> <Esc>:TagbarToggle<CR>
 
 "---------------------------------------
@@ -92,13 +99,14 @@ let g:gitgutter_enabled=0
 nmap <leader>m :GitGutterToggle<cr>
 
 "---------------------------------------
-" clang-format
+" vim-codefmt
 "---------------------------------------
-let g:clang_format#detect_style_file=1
-"let g:clang_format#auto_format=1
+augroup autoformat_settings
+autocmd FileType c,cpp,javascript AutoFormatBuffer clang-format
+augroup END
 
 "---------------------------------------
-" VIM settings
+" vim settings
 "---------------------------------------
 syntax on
 syntax sync minlines=256
@@ -160,10 +168,10 @@ set cinoptions=g-1
 "---------------------------------------
 set t_Co=256
 set background=dark
-"silent! colorscheme jay
-silent! colorscheme gruvbox
+silent! colorscheme jay
+"silent! colorscheme gruvbox
 
-let g:lightline = {'colorscheme': 'gruvbox', 'enable':{'statusline': 1, 'tabline': 1}}
+let g:lightline = {'colorscheme': 'jay', 'enable':{'statusline': 1, 'tabline': 1}}
 
 "---------------------------------------
 " VIM bindings
