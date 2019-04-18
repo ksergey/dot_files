@@ -101,9 +101,7 @@ nmap <leader>m :GitGutterToggle<cr>
 "---------------------------------------
 " vim-codefmt
 "---------------------------------------
-augroup autoformat_settings
-autocmd FileType c,cpp,javascript AutoFormatBuffer clang-format
-augroup END
+map <leader>z :FormatCode clang-format<cr>
 
 "---------------------------------------
 " vim settings
@@ -148,10 +146,10 @@ set sidescrolloff=3
 set encoding=utf-8
 set termencoding=utf-8
 set fileformats=unix,dos,mac
-set foldmethod=syntax
+set foldmethod=manual
 set foldnestmax=10
 set nofoldenable
-set foldlevel=100
+set foldlevel=2
 set fillchars=vert:\│
 set comments=sl:/*,mb:\ *,elx:\ */
 set complete-=i
