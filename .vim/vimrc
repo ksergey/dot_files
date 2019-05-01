@@ -1,4 +1,11 @@
-call plug#begin('~/.vim/plugged')
+" Crossplatform config
+if has('win32') || has ('win64')
+    let $VIMHOME=$HOME."/vimfiles"
+else
+    let $VIMHOME=$HOME."/.vim"
+endif
+
+call plug#begin($VIMHOME.'/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'derekwyatt/vim-fswitch', { 'for': ['c', 'cpp'] }
@@ -28,12 +35,6 @@ endif
 
 let mapleader="\<Space>"
 let g:load_doxygen_syntax=1
-
-if has('win32') || has ('win64')
-    let $VIMHOME=$VIM."/vimfiles"
-else
-    let $VIMHOME=$HOME."/.vim"
-endif
 
 "---------------------------------------
 " NERDTree
@@ -90,7 +91,7 @@ let g:cpp_member_variable_highlight=1
 "---------------------------------------
 " ultisnips
 "---------------------------------------
-let g:UltiSnipsSnippetsDir=$VIMHOME . "/snippets""
+let g:UltiSnipsSnippetsDir=$VIMHOME."/snippets""
 
 "---------------------------------------
 " vim-gitgutter
@@ -222,7 +223,7 @@ map <C-g> <Esc>:call IncludeGuard()<CR>
 
 function! IncludeLicense()
     if (&ft=="c" || &ft=="cpp" || &ft=="cc" || &ft=="h" || &ft=="hpp")
-        let licenseFile = $VIMHOME . "/cpp_license"
+        let licenseFile = $VIMHOME."/cpp_license"
         if filereadable(licenseFile)
             execute ":0r " . licenseFile
         else
