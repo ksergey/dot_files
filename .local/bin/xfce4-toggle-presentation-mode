@@ -1,0 +1,13 @@
+#!/bin/bash
+
+xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode -T
+
+STATUS=$(xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/presentation-mode)
+
+if [ "${STATUS}" == "true" ]; then
+ MESSAGE="Presentation mode on"
+else
+ MESSAGE="Presentation mode off"
+fi
+
+notify-send --urgency=low --expire-time=3000 --icon=xfce4-power-manager-settings "Power Manager" "${MESSAGE}"
