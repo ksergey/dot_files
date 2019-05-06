@@ -19,9 +19,14 @@ Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'itchyny/lightline.vim'
 
+" Format code
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+
+" Fuzzy finder
+Plug 'junegunn/fzf', { 'dir': $VIMHOME.'/fzf', 'do': './install --bin'  }
+Plug 'junegunn/fzf.vim'
 
 " Colorschemes
 Plug 'josuegaleas/jay'
