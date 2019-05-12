@@ -19,12 +19,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
 Plug 'itchyny/lightline.vim'
 
-" Format code
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-" Fuzzy finder
 Plug 'junegunn/fzf', { 'dir': $VIMHOME.'/fzf', 'do': './install --bin'  }
 Plug 'junegunn/fzf.vim'
 
@@ -108,6 +106,13 @@ nmap <leader>m :GitGutterToggle<cr>
 " vim-codefmt
 "---------------------------------------
 map <leader>z :FormatCode clang-format<cr>
+
+"---------------------------------------
+" fzf.vim
+"---------------------------------------
+map <leader>g :GFiles<cr>
+map <leader>f :GFiles<cr>
+map <leader>d :Buffers<cr>
 
 "---------------------------------------
 " vim settings
@@ -204,7 +209,6 @@ map 1 <Esc>:tabprevious<cr>
 map 3 <Esc>:tabnext<cr>
 map 2 <Esc>:tabnew<cr>
 map <leader>p :set paste!<cr>
-map <leader>f za<cr>k
 map <leader>c :set cursorline!<cr>
 
 "---------------------------------------
