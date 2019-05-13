@@ -111,8 +111,7 @@ map <leader>z :FormatCode clang-format<cr>
 " fzf.vim
 "---------------------------------------
 map <leader>g :GFiles<cr>
-map <leader>f :GFiles<cr>
-map <leader>d :Buffers<cr>
+map <leader>f :Files<cr>
 
 "---------------------------------------
 " vim settings
