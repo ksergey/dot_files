@@ -11,5 +11,8 @@ SUBSYSTEM=="scsi_host", KERNEL=="host*", ATTR{link_power_management_policy}="min
 # Wlan power save
 ACTION=="add", SUBSYSTEM=="net", KERNEL=="wlp*" RUN+="/usr/sbin/iw dev %k set power_save on"
 
+# Disable bluetooth
+#SUBSYSTEM=="rfkill", ATTR{type}=="bluetooth", ATTR{state}="0"
+
 # Disable wake-on-LAN
 ACTION=="add", SUBSYSTEM=="net", KERNEL=="enp*" RUN+="/usr/sbin/ethtool -s %k wol d"
