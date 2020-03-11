@@ -26,6 +26,9 @@ Plug 'google/vim-glaive'
 Plug 'junegunn/fzf', { 'dir': $VIMHOME.'/fzf', 'do': './install --bin'  }
 Plug 'junegunn/fzf.vim'
 
+" Indent
+Plug 'Yggdroot/indentLine'
+
 " Colorschemes
 Plug 'josuegaleas/jay'
 Plug 'morhetz/gruvbox'
@@ -112,6 +115,11 @@ map <leader>z :FormatCode clang-format<cr>
 "---------------------------------------
 map <leader>g :GFiles<cr>
 map <leader>f :Files<cr>
+
+"---------------------------------------
+" indentLine
+"---------------------------------------
+let g:indentLine_char='┊'
 
 "---------------------------------------
 " vim settings
