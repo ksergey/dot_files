@@ -9,7 +9,8 @@ call plug#begin($VIMHOME.'/plugged')
 
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'derekwyatt/vim-fswitch', { 'for': ['c', 'cpp'] }
-Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['cpp'] }
+" Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['cpp'] }
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-markdown', { 'for': ['markdown'] }
 Plug 'ervandew/supertab'
 Plug 'justinmk/vim-syntax-extra'
@@ -182,6 +183,7 @@ set cinoptions=g-1
 "---------------------------------------
 " VIM colorscheme
 "---------------------------------------
+let &t_ut='' " fix issue with kitty
 set t_Co=256
 set background=dark
 silent! colorscheme jay
