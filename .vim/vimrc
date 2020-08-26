@@ -26,6 +26,8 @@ Plug 'google/vim-glaive'
 Plug 'junegunn/fzf', { 'dir': $VIMHOME.'/fzf', 'do': './install --bin'  }
 Plug 'junegunn/fzf.vim'
 
+Plug 'benmills/vimux'
+
 " Colorschemes
 Plug 'josuegaleas/jay'
 Plug 'morhetz/gruvbox'
@@ -112,6 +114,12 @@ map <leader>z :FormatCode clang-format<cr>
 "---------------------------------------
 map <leader>g :GFiles<cr>
 map <leader>f :Files<cr>
+
+"---------------------------------------
+" vimux
+"---------------------------------------
+map <leader>t :VimuxPromptCommand("make ")<cr>
+map <Leader>r :VimuxRunLastCommand<cr>
 
 "---------------------------------------
 " vim settings
