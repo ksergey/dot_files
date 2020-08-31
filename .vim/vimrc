@@ -188,10 +188,10 @@ let &t_ut='' " fix issue with kitty
 set t_Co=256
 set background=dark
 "silent! colorscheme jay
-"silent! colorscheme gruvbox
-colorscheme mountaineer
+colorscheme gruvbox
+"colorscheme mountaineer
 
-let g:lightline = {'colorscheme': 'mountaineer', 'enable':{'statusline': 1, 'tabline': 1}}
+let g:lightline = {'colorscheme': 'gruvbox', 'enable':{'statusline': 1, 'tabline': 1}}
 
 "---------------------------------------
 " VIM bindings
