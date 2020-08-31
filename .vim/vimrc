@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'derekwyatt/vim-fswitch', { 'for': ['c', 'cpp'] }
 " Plug 'octol/vim-cpp-enhanced-highlight', { 'for': ['cpp'] }
 Plug 'sheerun/vim-polyglot'
+Plug 'godlygeek/tabular'
 Plug 'tpope/vim-markdown', { 'for': ['markdown'] }
 Plug 'ervandew/supertab'
 Plug 'justinmk/vim-syntax-extra'
