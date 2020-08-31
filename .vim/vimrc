@@ -25,7 +25,7 @@ Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
 
-Plug 'junegunn/fzf', { 'dir': $VIMHOME.'/fzf', 'do': './install --bin'  }
+Plug 'junegunn/fzf', { 'dir': $VIMHOME.'/fzf', 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
 Plug 'benmills/vimux'
@@ -115,6 +115,8 @@ map <leader>z :FormatCode clang-format<cr>
 "---------------------------------------
 " fzf.vim
 "---------------------------------------
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = ''
 map <leader>g :GFiles<cr>
 map <leader>f :Files<cr>
 
