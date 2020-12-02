@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+# https://github.com/ArtificalSUN/MKS-WIFI_PS_uploader
+Exec=/home/ksergey/3D/MKS_WIFI_PS_upload.py 192.168.88.119 ask %F
+Icon=/usr/share/icons/Arc/devices/32/printer.png
+Name=3D Printer
